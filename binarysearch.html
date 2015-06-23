@@ -2,17 +2,20 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <style>
-    .option {
-      display: inline-block;
-      padding: 10px;
-      margin: 2px;
-      background: #f1f1f1;
-      text-align: center;
-      min-width: 30px;
-    }
-    .lucky {
-      background: #ff0;
-    }
+      .option {
+        display: inline-block;
+        padding: 10px;
+        margin: 2px;
+        background: #f1f1f1;
+        text-align: center;
+        min-width: 30px;
+      }
+
+      .option:hover { cursor: pointer; }
+
+      .lucky { background: #ff0; }
+      .correct { background: #0f0; }
+      .incorrect { background: #f00; }
     </style>
   </head>
 
@@ -23,24 +26,43 @@
 
     <script>
       var App = {
-        numbers : []
+        numbers : [],
+        lucky_number : null
       };
 
       $('.content').append(numbers);
 
       function numbers() {
         var total_numbers  = Math.floor(Math.random() * 300),
-            lucky_number = Math.floor(Math.random() * total_numbers),
             class_name, option;
 
+        App.lucky_number = Math.floor(Math.random() * total_numbers);
+
         for (var i = 0; i < total_numbers; i++) {
-          class_name = i == lucky_number ? 'lucky' : 'unlucky';
-          option = '<div class="option ' + class_name + '">' + i + '</span>';
+          class_name = i == App.lucky_number ? 'lucky' : 'unlucky';
+          option = '<div data-value="' + i + '" class="option ' + class_name + '">' + i + '</span>';
           App.numbers.push(option);
         };
 
         return App.numbers;
       }
+
+      $('.option').click(function() {
+        var value = $(this).data('value'),
+            higher_lower, response;
+
+        if (value == App.lucky_number) {
+          alert('You win!');
+          response = 'correct';
+        } else {
+          higher_lower = value < App.lucky_number ? 'Higher' : 'Lower';
+          alert(higher_lower);
+          response = 'incorrect';
+        }
+
+        $(this).addClass(response);
+
+      });
     </script>
 
 

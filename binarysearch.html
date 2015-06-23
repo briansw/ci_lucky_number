@@ -40,15 +40,15 @@
 
         for (var i = 0; i < total_numbers; i++) {
           class_name = i == App.lucky_number ? 'lucky' : 'unlucky';
-          option = '<div data-value="' + i + '" class="option ' + class_name + '">' + i + '</span>';
+          option = '<div data-value="' + i + '" class="option ' + class_name + ' o' + i + '">' + i + '</span>';
           App.numbers.push(option);
         };
 
         return App.numbers;
       }
 
-      $('.option').click(function() {
-        var value = $(this).data('value'),
+      function make_guess(guess) {
+        var value = $(guess).data('value'),
             higher_lower, response;
 
         if (value == App.lucky_number) {
@@ -60,8 +60,11 @@
           response = 'incorrect';
         }
 
-        $(this).addClass(response);
+        $(guess).addClass(response);
+      }
 
+      $('.option').click(function() {
+        make_guess(this);
       });
     </script>
 

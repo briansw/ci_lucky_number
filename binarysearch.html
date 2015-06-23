@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+    .option {
+      display: inline-block;
+      padding: 10px;
+      margin: 2px;
+      background: #f1f1f1;
+      text-align: center;
+      min-width: 30px;
+    }
+    .winner {
+      background: #ff0;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="content">
+    </div>
+  </body>
+
+    <script>
+      var App = {
+        numbers : []
+      };
+
+      $('.content').append(numbers);
+
+      function numbers() {
+        var total_numbers  = Math.floor(Math.random() * 300),
+            winning_number = Math.floor(Math.random() * total_numbers),
+            class_name, option;
+
+        for (var i = 0; i < total_numbers; i++) {
+          if (i == winning_number) {
+            class_name = 'winner'
+          } else {
+            class_name = 'loser';
+          }
+
+          option = '<div class="option ' + class_name + '">' + i + '</span>';
+
+          App.numbers.push(option);
+        };
+
+        return App.numbers
+      }
+    </script>
+
+
+</html>

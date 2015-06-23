@@ -8,7 +8,7 @@
         margin: 0 auto;
       }
 
-      .option {
+      .number {
         display: inline-block;
         padding: 10px;
         margin: 2px;
@@ -17,7 +17,7 @@
         min-width: 30px;
       }
 
-      .option:hover { cursor: pointer; }
+      .number:hover { cursor: pointer; }
 
       .lucky { background: #ff0; }
       .correct { background: #0f0; }
@@ -40,14 +40,14 @@
 
       function numbers() {
         var total_numbers  = Math.floor(Math.random() * 300),
-            class_name, option;
+            class_name, number;
 
         App.lucky_number = Math.floor(Math.random() * total_numbers);
 
         for (var i = 0; i < total_numbers; i++) {
           class_name = i == App.lucky_number ? 'lucky' : 'unlucky';
-          option = '<div data-value="' + i + '" class="option ' + class_name + ' o' + i + '">' + i + '</span>';
-          App.numbers.push(option);
+          number = '<div data-value="' + i + '" class="number ' + class_name + ' n' + i + '">' + i + '</span>';
+          App.numbers.push(number);
         };
 
         return App.numbers;
@@ -69,7 +69,7 @@
         $(guess).addClass(response);
       }
 
-      $('.option').click(function() {
+      $('.number').click(function() {
         make_guess(this);
       });
     </script>

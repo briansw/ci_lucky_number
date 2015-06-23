@@ -10,7 +10,7 @@
       text-align: center;
       min-width: 30px;
     }
-    .winner {
+    .lucky {
       background: #ff0;
     }
     </style>
@@ -35,9 +35,9 @@
 
         for (var i = 0; i < total_numbers; i++) {
           if (i == winning_number) {
-            class_name = 'winner'
+            class_name = 'lucky'
           } else {
-            class_name = 'loser';
+            class_name = 'unlucky';
           }
 
           option = '<div class="option ' + class_name + '">' + i + '</span>';

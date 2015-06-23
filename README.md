@@ -31,4 +31,4 @@ Use the ```guess()``` function to make a guess:
 guess(number);
 ```
 
-The ```guess()``` function accepts one argument which is the name of the unique class for a give number. For example, if you want to guess 32, write ```guess('.n32');```.
+The ```guess()``` function accepts one argument which is the name of the unique class for a given number. For example, if you want to guess 32, write ```guess('.n32');```.

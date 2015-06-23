@@ -30,22 +30,16 @@
 
       function numbers() {
         var total_numbers  = Math.floor(Math.random() * 300),
-            winning_number = Math.floor(Math.random() * total_numbers),
+            lucky_number = Math.floor(Math.random() * total_numbers),
             class_name, option;
 
         for (var i = 0; i < total_numbers; i++) {
-          if (i == winning_number) {
-            class_name = 'lucky'
-          } else {
-            class_name = 'unlucky';
-          }
-
+          class_name = i == lucky_number ? 'lucky' : 'unlucky';
           option = '<div class="option ' + class_name + '">' + i + '</span>';
-
           App.numbers.push(option);
         };
 
-        return App.numbers
+        return App.numbers;
       }
     </script>
 

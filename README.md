@@ -11,6 +11,14 @@ Your goal is to find the lucky number programmatically with as few guesses as po
 
 Write a function that consistently finds the lucky number with the least number of guesses.
 
+#### Anatomy
+
+```html
+<div data-value="32" class="number n32">32</div>
+```
+
+Each number is wrapped in a ```div``` that contains the data attribute ```value``` which stores the numeric value of the number. Remember, ```'32'``` is different from ```32```.
+
 #### Classes
 
 Each number has two classes when the application initializes. This first is ```number``` which can be used to identify all of the available numbers on the page. The second class is unique to each number and can be used to identify a specific number on the page. The naming of the unique class follows a simple pattern: the number prefixed with the letter "n". For example, number 32&rsquo;s unique class will be ```n32```. You&rsquo;ll need to make use of both of these classes when writing your algorithm to find the lucky number.

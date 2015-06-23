@@ -11,11 +11,11 @@ Your goal is to find the lucky number programmatically with as few guesses as po
 
 Write a function that consistently finds the lucky number with the least number of guesses.
 
-### Classes
+#### Classes
 
 Each number has two classes when the application initializes. This first is ```number``` which can be used to identify all of the available numbers on the page. The second class is unique to each number and can be used to identify a specific number on the page. The naming of the unique class follows a simple pattern: the number prefixed with the letter "n". For example, number 32&rsquo;s unique class will be ```n32```. You&rsquo;ll need to make use of both of these classes when writing your algorithm to find the lucky number.
 
-### Guessing
+#### Guessing
 
 Use the ```make_guess()``` function to make a guess:
 

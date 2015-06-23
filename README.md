@@ -23,4 +23,4 @@ Use the ```make_guess()``` function to make a guess:
 make_guess(guess);
 ```
 
-The ```make_guess()``` function accepts one argument which is the name of the unique class for a give number. For example, if you want to guess 32, you would write ```make_guess('.o32');```.
+The ```make_guess()``` function accepts one argument which is the name of the unique class for a give number. For example, if you want to guess 32, write ```make_guess('.o32');```.

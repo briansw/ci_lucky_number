@@ -17,10 +17,10 @@ Each number has two classes when the application initializes. This first is ```n
 
 #### Guessing
 
-Use the ```make_guess()``` function to make a guess:
+Use the ```guess()``` function to make a guess:
 
 ```javascript
-make_guess(guess);
+guess(number);
 ```
 
-The ```make_guess()``` function accepts one argument which is the name of the unique class for a give number. For example, if you want to guess 32, write ```make_guess('.n32');```.
+The ```guess()``` function accepts one argument which is the name of the unique class for a give number. For example, if you want to guess 32, write ```guess('.n32');```.

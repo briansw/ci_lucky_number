@@ -5,7 +5,7 @@ In this game, the application randomly chooses a sample size of numbers. Within 
 Your goal is to find the lucky number programmatically with as few guesses as possible. Each guess will return one of three results: 
 
 - ```higher``` The lucky number is higher than your guess
-- ```lower```` The lucky number is lower than your guess
+- ```lower``` The lucky number is lower than your guess
 - ```win``` You guessed the lucky number
 
 ### Assignment

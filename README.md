@@ -27,7 +27,11 @@ Each number has two classes when the application initializes:
 - ```number```
 - ```n[X]```
 
-This first is ```number``` which can be used to identify all of the available numbers on the page. The second class is unique to each number and can be used to identify a specific number on the page. The naming of the unique class follows a simple pattern: the number prefixed with the letter "n". For example, number 32&rsquo;s unique class will be ```n32```. You&rsquo;ll need to make use of both of these classes when writing your algorithm to find the lucky number.
+The ```number``` class can be used to identify all of the available numbers on the page. 
+
+The second class, ```n[X]``` is unique to each number and can be used to identify a specific number on the page. The naming of the unique class follows a simple pattern: the number prefixed with the letter "n". For example, number 32&rsquo;s unique class will be ```n32```. 
+
+HINT: You&rsquo;ll need to make use of both of these classes when writing your algorithm to find the lucky number.
 
 #### Guessing
 

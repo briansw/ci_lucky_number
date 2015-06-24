@@ -1,8 +1,8 @@
-### Lucky Number X
+# Lucky Number X
 
-In this game, the application randomly chooses a sample size of numbers. Within the sample, a number at random will be deemed the lucky number and assigned the class ```lucky```.
+In this game, the application randomly determines a sample size of numbers. Within the sample, a number is assigned the lucky number.
 
-Your goal is to find the lucky number programmatically with as few guesses as possible. Each guess will return one of three results: 
+Your job is to find the lucky number programmatically using as few guesses as possible. Each guess will return one of three results: 
 
 - ```higher``` The lucky number is higher than your guess
 - ```lower``` The lucky number is lower than your guess
@@ -18,11 +18,16 @@ Write a function that consistently finds the lucky number with the least number 
 <div data-value="32" class="number n32">32</div>
 ```
 
-Each number is wrapped in a ```div``` that contains the data attribute ```value``` which stores the numeric value of the number. Remember, ```'32'``` is different from ```32```.
+Each number is wrapped in a ```div``` that contains the data attribute ```value``` which stores the numeric value of the number. Remember, ```"32"``` is different from ```32```.
 
 #### Classes
 
-Each number has two classes when the application initializes. This first is ```number``` which can be used to identify all of the available numbers on the page. The second class is unique to each number and can be used to identify a specific number on the page. The naming of the unique class follows a simple pattern: the number prefixed with the letter "n". For example, number 32&rsquo;s unique class will be ```n32```. You&rsquo;ll need to make use of both of these classes when writing your algorithm to find the lucky number.
+Each number has two classes when the application initializes: 
+
+- ```number```
+- ```n[X]```
+
+This first is ```number``` which can be used to identify all of the available numbers on the page. The second class is unique to each number and can be used to identify a specific number on the page. The naming of the unique class follows a simple pattern: the number prefixed with the letter "n". For example, number 32&rsquo;s unique class will be ```n32```. You&rsquo;ll need to make use of both of these classes when writing your algorithm to find the lucky number.
 
 #### Guessing
 

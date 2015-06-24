@@ -32,6 +32,7 @@ function guess(number) {
     higher_lower = value < App.lucky_number ? 'Higher' : 'Lower';
     alert(higher_lower);
     response = 'incorrect';
+    App.guesses += 1;
   }
 
   $(number).addClass(response);

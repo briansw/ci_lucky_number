@@ -39,6 +39,8 @@ guess(number);
 
 ```guess()``` accepts one argument which is the name of the unique class for a given number. For example, if you want to guess 32, write ```guess('.n32');```.
 
+#### Responses
+
 Each guess will return one of three results: 
 
 - ```higher``` The lucky number is higher than your guess

@@ -2,11 +2,7 @@
 
 In this game, the application randomly determines a sample size of numbers. Within the sample, a number is assigned the lucky number.
 
-Your job is to find the lucky number programmatically using as few guesses as possible. Each guess will return one of three results: 
-
-- ```higher``` The lucky number is higher than your guess
-- ```lower``` The lucky number is lower than your guess
-- ```win``` You guessed the lucky number
+Your job is to find the lucky number programmatically using as few guesses as possible.
 
 ### Assignment
 
@@ -41,4 +37,10 @@ Use the ```guess()``` function to make a guess:
 guess(number);
 ```
 
-The ```guess()``` function accepts one argument which is the name of the unique class for a given number. For example, if you want to guess 32, write ```guess('.n32');```.
+```guess()``` accepts one argument which is the name of the unique class for a given number. For example, if you want to guess 32, write ```guess('.n32');```.
+
+Each guess will return one of three results: 
+
+- ```higher``` The lucky number is higher than your guess
+- ```lower``` The lucky number is lower than your guess
+- ```win``` You guessed the lucky number

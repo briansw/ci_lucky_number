@@ -25,6 +25,8 @@ function guess(number) {
   var value = $(number).data('value'),
       higher_lower, response;
 
+  App.guesses += 1;
+
   if (value == App.lucky_number) {
     alert('You win!');
     response = 'correct';
@@ -32,7 +34,6 @@ function guess(number) {
     higher_lower = value < App.lucky_number ? 'Higher' : 'Lower';
     alert(higher_lower);
     response = 'incorrect';
-    App.guesses += 1;
   }
 
   $(number).addClass(response);
